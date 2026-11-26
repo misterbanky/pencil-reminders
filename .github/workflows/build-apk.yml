@@ -29,8 +29,11 @@ jobs:
         run: |
           if [ ! -d "android" ]; then
             cp pubspec.yaml /tmp/pubspec.yaml.bak
-            flutter create --platforms=android --project-name pencil_reminders --org com.pencil.reminders .
+            cp lib/main.dart /tmp/main.dart.bak
+            flutter create --no-pub --overwrite --platforms=android --project-name pencil_reminders --org com.pencil.reminders .
             cp /tmp/pubspec.yaml.bak pubspec.yaml
+            mkdir -p lib
+            cp /tmp/main.dart.bak lib/main.dart
           fi
 
       - name: Get dependencies
