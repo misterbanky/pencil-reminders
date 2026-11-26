@@ -10,10 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   shared_preferences: ^2.3.3
-  file_picker: ^8.1.4
   audioplayers: ^6.1.0
-  android_alarm_manager_plus: ^4.0.4
-  flutter_local_notifications: ^18.0.1
 
 dev_dependencies:
   flutter_test:
